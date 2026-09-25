@@ -1,0 +1,121 @@
+version: 2
+
+sources:
+  - name: sap
+    database: EVRPURE
+    schema: SAP
+    description: "SAP S4/HANA raw tables - Order to Cash and supporting master data"
+    tables:
+      # Customer Master
+      - name: ADRC
+        description: "Address management - central address table"
+      - name: KNA1
+        description: "Customer master - general data"
+      - name: KNB1
+        description: "Customer master - company code data"
+      - name: KNVV
+        description: "Customer master - sales area data"
+      - name: KNVK
+        description: "Customer master - contact persons"
+      - name: KNVP
+        description: "Customer master - partner functions"
+
+      # Material Master
+      - name: MARA
+        description: "Material master - general data"
+      - name: MAKT
+        description: "Material master - descriptions"
+      - name: MARC
+        description: "Material master - plant data"
+      - name: MARD
+        description: "Material master - storage location data"
+
+      # Sales Documents
+      - name: VBAK
+        description: "Sales document header"
+      - name: VBAP
+        description: "Sales document item"
+      - name: VBUP
+        description: "Sales document item status"
+      - name: VBUK
+        description: "Sales document header status"
+      - name: VBFA
+        description: "Sales document flow"
+
+      # Billing Documents
+      - name: VBRK
+        description: "Billing document header"
+      - name: VBRP
+        description: "Billing document item"
+
+      # Accounting Documents
+      - name: BKPF
+        description: "Accounting document header"
+      - name: BSEG
+        description: "Accounting document line item"
+      - name: BSIK
+        description: "Vendor line items - open"
+      - name: BSAK
+        description: "Vendor line items - cleared"
+      - name: BSET
+        description: "Tax data line items"
+
+      # Revenue Accounting (FARR)
+      - name: FARR_D_CONTRACT
+        description: "Revenue accounting - contracts"
+      - name: FARR_D_POB
+        description: "Revenue accounting - performance obligations"
+      - name: FARR_D_POB_ASS
+        description: "Revenue accounting - POB assignments to docs"
+      - name: FARR_D_ORDER_I
+        description: "Revenue accounting - order items"
+      - name: FARR_D_INVOIC_I
+        description: "Revenue accounting - invoice items"
+      - name: FARR_D_POSTING
+        description: "Revenue accounting - postings"
+
+      # Organizational Config
+      - name: T001
+        description: "Company codes"
+      - name: T001W
+        description: "Plants"
+      - name: T001L
+        description: "Storage locations"
+      - name: T005
+        description: "Countries"
+      - name: T005T
+        description: "Country texts"
+      - name: T005S
+        description: "Regions"
+      - name: T052
+        description: "Payment terms"
+      - name: T052U
+        description: "Payment terms texts"
+      - name: T042Z
+        description: "Payment methods"
+
+      # Currency
+      - name: TCURC
+        description: "Currency codes"
+      - name: TCURR
+        description: "Exchange rates"
+      - name: TCURX
+        description: "Currency decimal places - defines decimal precision per currency code"
+
+      # GL Accounts
+      - name: SKA1
+        description: "GL account master - chart of accounts"
+      - name: SKAT
+        description: "GL account texts"
+      - name: SKB1
+        description: "GL account master - company code"
+
+      # Cost Objects
+      - name: CEPC
+        description: "Profit center master"
+      - name: CEPCT
+        description: "Profit center texts"
+      - name: CSKS
+        description: "Cost center master"
+      - name: CSKT
+        description: "Cost center texts"
