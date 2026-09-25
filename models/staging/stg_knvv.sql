@@ -1,0 +1,25 @@
+SELECT
+    KUNNR AS customer_number,
+    VKORG AS sales_organization,
+    VTWEG AS distribution_channel,
+    SPART AS division,
+    ERDAT AS created_date,
+    ERNAM AS created_by,
+    KDGRP AS customer_group,
+    BZIRK AS sales_district,
+    KONDA AS price_group,
+    PLTYP AS price_list_type,
+    INCO1 AS incoterms_1,
+    INCO2 AS incoterms_2,
+    AUTLF AS complete_delivery_flag,
+    VWERK AS delivering_plant,
+    VSBED AS shipping_conditions,
+    WAESSION_KNV AS currency,
+    ZTERM AS payment_terms,
+    KTGRD AS account_assignment_group,
+    KVGR1 AS customer_group_1,
+    KVGR2 AS customer_group_2,
+    KVGR3 AS customer_group_3,
+    LOEVM AS deletion_flag
+FROM {{ source('sap', 'KNVV') }}
+WHERE MANDT = '100'

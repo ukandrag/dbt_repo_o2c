@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  # Dimension models
+  - name: int_customer
+    description: "Customer master - KNA1 + KNB1 + KNVV + ADRC joined"
+  - name: int_material
+    description: "Material master - MARA + MAKT + MARC joined"
+  - name: int_company_code
+    description: "Company code - T001 + T005T"
+  - name: int_plant
+    description: "Plant - T001W + T005T"
+  - name: int_gl_account
+    description: "GL account - SKA1 + SKAT"
+  - name: int_cost_center
+    description: "Cost center - CSKS + CSKT"
+  - name: int_profit_center
+    description: "Profit center - CEPC + CEPCT"
+  - name: int_currency
+    description: "Currency with latest exchange rates - TCURC + TCURR"
+  - name: int_payment_terms
+    description: "Payment terms - T052 + T052U"
+
+  # Fact models
+  - name: int_sales_order
+    description: "Sales order - VBAK + VBAP + VBUP + VBUK with status decoding"
+  - name: int_billing
+    description: "Billing document - VBRK + VBRP with type decoding"
+  - name: int_document_flow
+    description: "Document flow - VBFA with category decoding"
+  - name: int_accounting
+    description: "Accounting document - BKPF + BSEG with debit/credit split"
+  - name: int_payment
+    description: "Payment - BSIK (open) + BSAK (cleared) unified"
+  - name: int_revenue_recognition
+    description: "Revenue recognition - FARR contracts + POBs + postings"

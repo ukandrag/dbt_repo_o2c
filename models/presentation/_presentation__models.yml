@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: order_to_cash
+    description: "Semantic view for Order-to-Cash lifecycle analytics - tracks orders from creation through billing and accounting with cycle time metrics."

@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: fct_order_to_cash
+    description: "Full Order-to-Cash lifecycle: order -> billing -> accounting with customer, material, and payment terms dimensions. Includes O2C cycle time metrics."
+  
